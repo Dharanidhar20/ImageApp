@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+
+.carousel-indicators {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin: 7px 0;
+    padding: 0;
+}
+.carousel-control-prev-icon {
+    background-image: url('./assets/images/arrow-left.png')
+}
+.carousel-control-next-icon {
+    background-image: url('./assets/images/arrow-right.png')
+}
