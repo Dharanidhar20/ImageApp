@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   modalContent: any;
   closeResult: string;
 
-  constructor(private imageService: ImageService, private modalService: NgbModal) { }
+  constructor(public imageService: ImageService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.imageList = [];
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   getAllImageList() {
     this.imageService.getAllImages().subscribe(resp => {
-      this.imageList = resp;
+      this.imageList = resp.groups;
     }, error => {
       console.error(error);
       window.scroll(0, 0);
